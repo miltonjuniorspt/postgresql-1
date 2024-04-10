@@ -1,0 +1,18 @@
+CREATE TABLE ALUNO (
+  ID_INT SERIAL PRIMARY KEY,
+  nome VARCHAR (40) NOT NULL,
+  email VARCHAR NOT NULL,
+  endereco VARCHAR NOT NULL
+  );
+   
+   SELECT * FROM ALUNO
+   
+   INSERT INTO ALUNO
+   (nome, email, endereco) 
+   
+   VALUES
+   ('João Carlos', 'jcarlos@gmail.com', 'Rua 13 de maio'),
+   ('José Vitor', 'jvitor@gmail.com', 'Rua da Saudade'),
+   ('Paulo A ndré', 'pandr@gmail.com', 'Rua do Sol');
+ 
+   
