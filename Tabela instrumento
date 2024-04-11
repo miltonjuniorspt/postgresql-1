@@ -1,0 +1,18 @@
+CREATE TABLE instrumento (
+  id_instrumento SERIAL PRIMARY KEY,
+  nome VARCHAR(20) NOT NULL,
+  em_promocao BOOLEAN NOT NULL
+  );
+  
+  SELECT * FROM instrumento
+  
+  
+   INSERT INTO instrumento
+   (nome, preco, em_promocao) 
+
+   VALUES
+   ('Guitarra', 399.00, TRUE),
+   ('Violão', 300.00, FALSE),
+   ('Teclado', 400.00, TRUE);
+   
+    SELECT * FROM instrumento
