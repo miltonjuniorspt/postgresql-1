@@ -1,0 +1,14 @@
+CREATE table artista (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(20) UNIQUE
+);
+
+SELECT * FROM artista
+  
+ 
+INSERT INTO artista
+(nome) 
+VALUES
+('Madonna'),
+('Michael Jackson'),
+('Cimdy Lauper');
