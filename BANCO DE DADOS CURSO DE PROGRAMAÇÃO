@@ -1,0 +1,47 @@
+create Table disciplinas (
+  ID_disciplina INT AUTI_INCREMENT PRIMARY key,
+  nome_disciplina VARCHAR(50) NOT NULL,
+  nome_professor VARCHAR(50) NOT NULL
+  );
+  
+insert into disciplinas(nome_disciplina, nome_professor)
+VALUES 
+('Banco de dados', 'Maria Alvez'),
+('Python', 'Pietro Souza'),
+('POO', 'Sia Tavares');
+
+
+
+
+create Table alunos (
+  ID_alunos INT AUTO_INCREMENT PRIMARY key,
+  nome_alunos VARCHAR(50) NOT NULL,
+  disciplinas_id INT,
+  CONSTRAINT FOREIGN KEY (disciplinas_id)
+      REFERENCES disciplinas (id_disciplina)
+);
+  
+  insert into alunos(nome_alunos, disciplinas_id)
+  VALUES
+  ('Cleiton', 2),
+  ('Carol', NULL),
+  ('Ruan', 2),
+  ('Gabi', 1),
+  ('Riann', null),
+  ('Mia', 2),
+  ('Malu', 1);
+  
+SELECT * FROM alunos, disciplinas
+
+select nome_alunos, nome_disciplina from alunos
+inner join disciplinas
+on disciplinas_id = alunos.disciplinas_id;
+
+select nome_alunos, nome_disciplina from alunos
+left JOIN disciplinas
+on disciplinas.id_disciplina = alunos.disciplinas_id
+UNION
+select nome_alunos, nome_disciplina from alunos
+RIGHT JOIN disciplinas
+on disciplinas.id_disciplina = alunos.disciplinas_id;
+
